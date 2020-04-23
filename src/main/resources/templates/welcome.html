@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Welcome to our web site ...</h1>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>账号</th>
+								<th>姓名</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="user,status : ${user}">
+								<td th:text="${status.count}"></td>
+								<td th:text="${user.account}"></td>
+								<td th:text="${user.password}"></td>
+							</tr>
+						</tbody>
+					</table>
+</body>
+</html>
